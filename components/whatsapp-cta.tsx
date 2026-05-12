@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { QualificationModal } from '@/components/qualification-modal'
+
+const WA_LINK = 'https://wa.me/351912112456'
 
 interface WhatsAppCTAProps {
   children: React.ReactNode
@@ -23,17 +23,31 @@ export function WhatsAppCTA({
   variant = 'primary',
   className,
 }: WhatsAppCTAProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <>
-      <button
-        onClick={() => setIsOpen(true)}
+  // header and link variants go directly to WhatsApp
+  if (variant === 'header' || variant === 'link') {
+    return (
+      <a
+        href={WA_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
         className={cn(variantStyles[variant], className)}
       >
         {children}
-      </button>
-      <QualificationModal open={isOpen} onClose={() => setIsOpen(false)} />
-    </>
+      </a>
+    )
+  }
+
+  // primary variant scrolls to the diagnostico section
+  const scrollToDiagnostico = () => {
+    document.getElementById('diagnostico-section')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return (
+    <button
+      onClick={scrollToDiagnostico}
+      className={cn(variantStyles[variant], className)}
+    >
+      {children}
+    </button>
   )
 }

@@ -172,10 +172,10 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
       <div
         className="absolute inset-0"
         style={{
-          background: 'rgba(0, 0, 0, 0.7)',
-          backdropFilter: 'blur(8px) saturate(0.8)',
-          WebkitBackdropFilter: 'blur(8px) saturate(0.8)',
-          transition: 'backdrop-filter 300ms ease',
+          background: 'rgba(0, 0, 0, 0.6)',
+          backdropFilter: 'blur(12px) saturate(0.8)',
+          WebkitBackdropFilter: 'blur(12px)',
+          transition: 'all 300ms ease',
         }}
         onClick={onClose}
       />

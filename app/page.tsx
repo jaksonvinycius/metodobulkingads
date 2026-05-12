@@ -4,6 +4,7 @@ import { ProblemaSection } from '@/components/ProblemaSection'
 import { SolucaoSection } from '@/components/SolucaoSection'
 import { ComoFuncionaSection } from '@/components/ComoFuncionaSection'
 import { CtaFinalSection } from '@/components/CtaFinalSection'
+import { DiagnosticoSection } from '@/components/DiagnosticoSection'
 import { Footer } from '@/components/Footer'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
 import { ScrollObserver } from '@/components/ScrollObserver'
@@ -18,6 +19,7 @@ export default function Home() {
       <SolucaoSection />
       <ComoFuncionaSection />
       <CtaFinalSection />
+      <DiagnosticoSection />
       <Footer />
       <WhatsAppFloat />
     </main>
