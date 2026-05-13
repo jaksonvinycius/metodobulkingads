@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="hsl(30,55%,58%)"/>
+      <stop offset="100%" stop-color="hsl(30,50%,38%)"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="102" ry="102" fill="url(#bg)"/>
+  <text
+    x="256"
+    y="332"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="228"
+    letter-spacing="-8"
+    fill="white"
+    opacity="0.97"
+  >VJ</text>
+</svg>
