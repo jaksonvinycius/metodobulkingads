@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Vinycius Jakson | Atraia os Pacientes Certos',
     description:
       'Ajudo nutricionistas a atrair pacientes qualificados de forma previsível e a faturar mais. Diagnóstico gratuito.',
-    image: 'https://metodobulkingads.site/og-image.png',
+    images: ['https://metodobulkingads.site/og-image.png'],
     type: 'website',
   },
   twitter: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: 'Vinycius Jakson | Atraia os Pacientes Certos',
     description:
       'Ajudo nutricionistas a atrair pacientes qualificados de forma previsível e a faturar mais. Diagnóstico gratuito.',
-    image: 'https://metodobulkingads.site/og-image.png',
+    images: ['https://metodobulkingads.site/og-image.png'],
   },
   icons: {
     shortcut: '/favicon.ico',

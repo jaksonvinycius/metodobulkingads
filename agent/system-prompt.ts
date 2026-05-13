@@ -231,6 +231,6 @@ export function buildSystemPrompt(): Anthropic.TextBlockParam[] {
       type: 'text',
       text: content,
       cache_control: { type: 'ephemeral' },
-    },
+    } as any,
   ]
 }
