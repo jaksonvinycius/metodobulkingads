@@ -1,4 +1,4 @@
-import { HeartCrack, CalendarX, TrendingDown, CircleDollarSign, Clock } from 'lucide-react'
+﻿import { HeartCrack, CalendarX, TrendingDown, CircleDollarSign, Clock } from 'lucide-react'
 
 const problems = [
   {
@@ -9,17 +9,17 @@ const problems = [
   {
     icon: CalendarX,
     title: 'Não sabe quanto vai faturar no próximo mês',
-    body: 'Meses bons seguidos de meses ruins. Você nunca sabe quantos pacientes vai atender — e isso trava qualquer planejamento.',
+    body: 'Meses bons seguidos de meses ruins. tu nunca sabe quantos pacientes vai atender — e isso trava qualquer planejamento.',
   },
   {
     icon: TrendingDown,
     title: 'Depende de indicações para sobreviver',
-    body: 'Quando alguém indica, ótimo. Mas e quando não indica? Você fica esperando, sem controle nenhum.',
+    body: 'Quando alguém indica, ótimo. Mas e quando não indica? tu fica esperando, sem controle nenhum.',
   },
   {
     icon: CircleDollarSign,
     title: 'Acha que "não dá para ir além"',
-    body: 'Você olha para outros profissionais crescendo e pensa que é sorte, ou que com você é diferente. Não é.',
+    body: 'tu olha para outros profissionais crescendo e pensa que é sorte, ou que com tu é diferente. Não é.',
   },
 ]
 
@@ -33,10 +33,10 @@ export function ProblemaSection() {
             Isso te parece familiar?
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[hsl(35,30%,90%)] max-w-3xl mx-auto">
-            Você sabe que pode <span className="text-gradient">mais</span>
+            tu sabe que pode <span className="text-gradient">mais</span>
           </h2>
           <p className="mt-4 text-[hsl(30,15%,50%)] text-lg max-w-2xl mx-auto">
-            Mas algo está travando o seu crescimento.
+            Mas algo está travando o teu crescimento.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export function ProblemaSection() {
                   Sem tempo para cuidar disso
                 </h3>
                 <p className="text-[hsl(30,15%,50%)] text-sm leading-relaxed">
-                  Seu foco deveria ser nos pacientes, não tentando descobrir sozinha como atrair mais.
+                  teu foco deveria ser nos pacientes, não tentando descobrir sozinha como atrair mais.
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export function ProblemaSection() {
         </div>
 
         <p className="text-center mt-12 text-[hsl(35,30%,75%)] text-lg max-w-2xl mx-auto font-display font-semibold animate-on-scroll">
-          Dá para ir muito além do que você imagina. E eu estou aqui para provar isso.
+          Dá para ir muito além do que tu imagina. E eu estou aqui para provar isso.
         </p>
       </div>
     </section>

@@ -1,32 +1,32 @@
-import { Search, Lightbulb, Rocket, LineChart } from 'lucide-react'
+﻿import { Search, Lightbulb, Rocket, LineChart } from 'lucide-react'
 
 const steps = [
   {
     number: '01',
     icon: Search,
-    title: 'Entendo a sua realidade',
-    body: 'Analisamos o seu momento, a sua região e o tipo de paciente que você quer atender para montar um plano que faça sentido.',
+    title: 'Entendo a tua realidade',
+    body: 'Analisamos o teu momento, a tua região e o tipo de paciente que tu quer atender para montar um plano que faça sentido.',
     side: 'left' as const,
   },
   {
     number: '02',
     icon: Lightbulb,
     title: 'Monto o plano completo',
-    body: 'Crio toda a estratégia para você começar a receber contatos de pessoas interessadas no seu acompanhamento.',
+    body: 'Crio toda a estratégia para tu começar a receber contatos de pessoas interessadas no teu acompanhamento.',
     side: 'right' as const,
   },
   {
     number: '03',
     icon: Rocket,
     title: 'Os pacientes começam a chegar',
-    body: 'Com tudo pronto, você começa a receber mensagens de pessoas prontas para agendar consulta.',
+    body: 'Com tudo pronto, tu começa a receber mensagens de pessoas prontas para agendar consulta.',
     side: 'left' as const,
   },
   {
     number: '04',
     icon: LineChart,
     title: 'Melhoria contínua',
-    body: 'Acompanho os resultados de perto e vou ajustando para você receber cada vez mais pacientes pelo menor custo.',
+    body: 'Acompanho os resultados de perto e vou ajustando para tu receber cada vez mais pacientes pelo menor custo.',
     side: 'right' as const,
   },
 ]
@@ -44,7 +44,7 @@ export function ComoFuncionaSection() {
             Como funciona na <span className="text-gradient">prática</span>
           </h2>
           <p className="mt-4 text-[hsl(30,15%,50%)] text-lg max-w-xl mx-auto">
-            Sem complicação. Você foca nos pacientes, eu cuido da atração.
+            Sem complicação. tu foca nos pacientes, eu cuido da atração.
           </p>
         </div>
 

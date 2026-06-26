@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useRef, useEffect } from 'react'
 import { MessageCircle, ArrowLeft, CheckCircle, X } from 'lucide-react'
@@ -17,7 +17,7 @@ const QUESTIONS = [
     ],
   },
   {
-    label: 'Quantos pacientes NOVOS você fecha por mês (em média)?',
+    label: 'Quantos pacientes NOVOS Tu fecha por mês (em média)?',
     options: [
       'Menos de 3 pacientes novos',
       'Entre 3 e 8 pacientes novos',
@@ -26,7 +26,7 @@ const QUESTIONS = [
     ],
   },
   {
-    label: 'Você já tentou atrair pacientes pela internet antes?',
+    label: 'Tu já tentou atrair pacientes pela internet antes?',
     options: [
       'Nunca tentei, não sei por onde começar',
       'Já tentei sozinho(a) mas não funcionou',
@@ -35,7 +35,7 @@ const QUESTIONS = [
     ],
   },
   {
-    label: 'Se eu te mostrar como ter pacientes de forma previsível, você tem disponibilidade para investir em anúncios?',
+    label: 'Se eu te mostrar como ter pacientes de forma previsível, Tu tem disponibilidade para investir em anúncios?',
     options: [
       'Sim, já tenho orçamento separado para crescer',
       'Sim, consigo investir se os resultados aparecerem',
@@ -218,7 +218,7 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
           {isLoading && (
             <div className="flex flex-col items-center justify-center py-10 gap-4">
               <div className="w-9 h-9 rounded-full border-2 border-[hsl(30,50%,50%)]/20 border-t-[hsl(30,50%,50%)] animate-spin" />
-              <p className="text-[hsl(30,15%,50%)] text-sm">Preparando seu diagnóstico...</p>
+              <p className="text-[hsl(30,15%,50%)] text-sm">Preparando teu diagnóstico...</p>
             </div>
           )}
 
@@ -240,7 +240,7 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
                     <span className="text-gradient">{nome.trim()}!</span>
                   </h3>
                   <p className="text-[hsl(30,15%,55%)] text-sm mb-8 max-w-sm mx-auto leading-relaxed">
-                    Com base nas suas respostas, consigo te ajudar a ter pacientes de forma previsível. Vamos conversar?
+                    Com base nas tuas respostas, consigo te ajudar a ter pacientes de forma previsível. Vamos conversar?
                   </p>
                   <a
                     href={`${WA_BASE}${buildWAMessage()}`}
@@ -261,7 +261,7 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
                     Entendido, {nome.trim()}!
                   </h3>
                   <p className="text-[hsl(30,15%,55%)] text-sm mb-8 max-w-sm mx-auto leading-relaxed">
-                    Faz sentido. Assim que você estiver pronto(a) para dar o próximo passo, o diagnóstico gratuito continua disponível aqui.
+                    Faz sentido. Assim que Tu estiver pronto(a) para dar o próximo passo, o diagnóstico gratuito continua disponível aqui.
                   </p>
                   <button
                     onClick={onClose}
@@ -313,7 +313,7 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
               {step === 0 && (
                 <div>
                   <p className="text-[hsl(35,30%,88%)] font-medium text-base mb-5">
-                    Como você prefere ser chamado(a)?
+                    Como Tu prefere ser chamado(a)?
                   </p>
                   <input
                     ref={inputRef}
@@ -324,13 +324,13 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
                       setNameError(false)
                     }}
                     onKeyDown={(e) => e.key === 'Enter' && handleNameSubmit()}
-                    placeholder="Digite seu nome"
+                    placeholder="Digite teu nome"
                     style={nameError ? { borderColor: 'hsl(0 70% 55% / 0.5)' } : undefined}
                     className="form-option placeholder:text-[hsl(30,15%,35%)] mb-3"
                   />
                   {nameError && (
                     <p className="text-red-400/80 text-xs mb-4">
-                      Por favor, insira seu nome (mínimo 2 caracteres).
+                      Por favor, insira teu nome (mínimo 2 caracteres).
                     </p>
                   )}
                   <button
@@ -362,7 +362,7 @@ export function QualificationModal({ open, onClose }: QualificationModalProps) {
                   {step === 4 && (
                     <p className="text-[hsl(30,15%,35%)] text-xs mt-5 text-center flex items-center justify-center gap-1.5">
                       <CheckCircle className="w-3.5 h-3.5 text-[hsl(30,50%,45%)]" />
-                      Última pergunta — seu resultado aparece em seguida
+                      Última pergunta — teu resultado aparece em seguida
                     </p>
                   )}
                 </div>

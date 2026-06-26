@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
@@ -23,7 +23,7 @@ export function DiagnosticoSection() {
           </h2>
 
           <p className="text-[hsl(30,15%,50%)] text-base max-w-md mx-auto mb-10 leading-relaxed">
-            Menos de 3 minutos. Sem compromisso. No final você sabe exatamente o que precisa para atrair mais pacientes.
+            Menos de 3 minutos. Sem compromisso. No final tu sabe exatamente o que precisa para atrair mais pacientes.
           </p>
 
           <button

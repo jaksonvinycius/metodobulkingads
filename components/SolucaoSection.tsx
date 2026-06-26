@@ -1,26 +1,26 @@
-import { Crosshair, PanelsTopLeft, BarChart3, MessageCircle } from 'lucide-react'
+﻿import { Crosshair, PanelsTopLeft, BarChart3, MessageCircle } from 'lucide-react'
 import { WhatsAppCTA } from '@/components/whatsapp-cta'
 
 const features = [
   {
     icon: Crosshair,
     title: 'Feito para Nutricionistas',
-    body: 'Não é uma estratégia genérica. Tudo é pensado para o seu nicho, a sua região e o seu tipo de paciente.',
+    body: 'Não é uma estratégia genérica. Tudo é pensado para o teu nicho, a tua região e o teu tipo de paciente.',
   },
   {
     icon: Crosshair,
-    title: 'Pacientes Certos para Você',
+    title: 'Pacientes Certos para Tu',
     body: 'Atraia pessoas que já estão buscando acompanhamento nutricional — e não curiosos que nunca agendam.',
   },
   {
     icon: PanelsTopLeft,
-    title: 'Você Cuida dos Pacientes, Eu Cuido do Resto',
-    body: 'Toda a parte de atração de novos pacientes fica comigo. Você foca no que faz de melhor.',
+    title: 'Tu Cuida dos Pacientes, Eu Cuido do Resto',
+    body: 'Toda a parte de atração de novos pacientes fica comigo. Tu foca no que faz de melhor.',
   },
   {
     icon: BarChart3,
     title: 'Acompanhamento de Perto',
-    body: 'Mais do que colocar anúncios no ar. Você recebe direcionamento estratégico para potencializar seus resultados.',
+    body: 'Mais do que colocar anúncios no ar. Tu recebe direcionamento estratégico para potencializar teus resultados.',
   },
 ]
 

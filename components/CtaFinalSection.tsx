@@ -1,4 +1,4 @@
-import { Shield, MessageCircle, ArrowRight } from 'lucide-react'
+﻿import { Shield, MessageCircle, ArrowRight } from 'lucide-react'
 import { WhatsAppCTA } from '@/components/whatsapp-cta'
 
 export function CtaFinalSection() {
@@ -24,7 +24,7 @@ export function CtaFinalSection() {
           </h2>
 
           <p className="mt-6 text-[hsl(30,15%,50%)] text-lg max-w-xl mx-auto leading-relaxed">
-            Vamos analisar juntos o potencial do seu consultório. Descubra como atrair os pacientes certos e transformar seus resultados.
+            Vamos analisar juntos o potencial do teu consultório. Descubra como atrair os pacientes certos e transformar teus resultados.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4">
