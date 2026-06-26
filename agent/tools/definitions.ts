@@ -92,4 +92,34 @@ export const toolDefinitions: Anthropic.Tool[] = [
       required: ['command', 'cwd'],
     },
   },
+  {
+    name: 'run_npm_install',
+    description:
+      'Runs npm install in the specified project directory. Use after cloning a template to install dependencies.',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        cwd: {
+          type: 'string',
+          description: 'Absolute path to the project directory',
+        },
+      },
+      required: ['cwd'],
+    },
+  },
+  {
+    name: 'run_build_check',
+    description:
+      'Runs "npx tsc --noEmit" to type-check the project without producing output files. Returns a list of TypeScript errors or "OK" if the project is clean.',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        cwd: {
+          type: 'string',
+          description: 'Absolute path to the project directory',
+        },
+      },
+      required: ['cwd'],
+    },
+  },
 ]

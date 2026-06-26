@@ -1,6 +1,6 @@
 import type Anthropic from '@anthropic-ai/sdk'
 import { getClient } from './client'
-import { buildSystemPrompt } from './system-prompt'
+import { buildSystemPrompt, loadNichePrompt } from './system-prompt'
 import { toolDefinitions } from './tools/definitions'
 import { executeToolCall } from './tools/handlers'
 import type { AgentInput, AgentOutput } from './types'
@@ -50,7 +50,7 @@ export async function runPageAgent(input: AgentInput): Promise<AgentOutput> {
     const response = await client.messages.create({
       model: MODEL,
       max_tokens: MAX_TOKENS,
-      system: buildSystemPrompt(),
+      system: buildSystemPrompt(input.niche_prompt ? loadNichePrompt(input.niche_prompt) : undefined),
       tools: toolDefinitions,
       messages,
     })

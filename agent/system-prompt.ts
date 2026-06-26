@@ -205,7 +205,7 @@ const COMPONENT_PATTERNS = `
 \`\`\`
 `
 
-export function buildSystemPrompt(): Anthropic.TextBlockParam[] {
+export function buildSystemPrompt(nichePrompt?: string): Anthropic.TextBlockParam[] {
   const content = [
     '# Contexto do Negócio e Marca\n\n',
     CLAUDE_MD,
@@ -224,6 +224,7 @@ export function buildSystemPrompt(): Anthropic.TextBlockParam[] {
     '4. **Valide** — sempre rode npx tsc --noEmit após modificações para garantir zero erros TypeScript.\n',
     '5. **Reporte** — descreva o que foi alterado de forma concisa e direta.\n\n',
     'Se a instrução violar as regras da marca (trocar cores, fontes, tom), recuse educadamente e ofereça alternativas dentro das regras.',
+    nichePrompt ? `\n\n---\n\n${nichePrompt}` : '',
   ].join('')
 
   return [
@@ -233,4 +234,19 @@ export function buildSystemPrompt(): Anthropic.TextBlockParam[] {
       cache_control: { type: 'ephemeral' },
     } as any,
   ]
+}
+
+export function loadNichePrompt(template: 'premium-health' | 'standard' | 'correction'): string {
+  const promptMap: Record<string, string> = {
+    'premium-health': 'health-premium.md',
+    'standard': 'standard.md',
+    'correction': 'correction.md',
+  }
+  const filename = promptMap[template]
+  if (!filename) return ''
+  try {
+    return readFileSync(join(process.cwd(), 'agent', 'prompts', filename), 'utf-8')
+  } catch {
+    return ''
+  }
 }

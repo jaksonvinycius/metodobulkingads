@@ -67,6 +67,38 @@ export function executeToolCall(
       }
     }
 
+    case 'run_npm_install': {
+      try {
+        execSync('npm install --prefer-offline', {
+          cwd: input.cwd,
+          encoding: 'utf-8',
+          timeout: 120_000,
+          stdio: 'pipe',
+        })
+        return 'npm install completed successfully'
+      } catch (err: unknown) {
+        const error = err as { stdout?: string; stderr?: string; message?: string }
+        const out = [error.stdout, error.stderr].filter(Boolean).join('\n').trim()
+        return `npm install failed: ${out || error.message}`
+      }
+    }
+
+    case 'run_build_check': {
+      try {
+        execSync('npx tsc --noEmit', {
+          cwd: input.cwd,
+          encoding: 'utf-8',
+          timeout: 60_000,
+          stdio: 'pipe',
+        })
+        return 'OK — TypeScript check passed, no errors'
+      } catch (err: unknown) {
+        const error = err as { stdout?: string; stderr?: string; message?: string }
+        const out = [error.stdout, error.stderr].filter(Boolean).join('\n').trim()
+        return out || error.message || 'TypeScript check failed with no output'
+      }
+    }
+
     default:
       return `ERROR: Unknown tool "${name}"`
   }

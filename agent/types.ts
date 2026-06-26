@@ -2,6 +2,7 @@ export interface AgentInput {
   instruction: string
   screenshot?: string
   project_root: string
+  niche_prompt?: 'premium-health' | 'standard' | 'correction'
 }
 
 export interface AgentOutput {
